@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <form 
+    action="mailto:jake.dougall.d102646@mcast.edu.mt"
+    method="post"
+    enctype="text/plain">
+        
+        <fieldset>
+            
+            <legend>
+                Personal Details
+            </legend>
+            
+            <label for="">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Joe" required>
+            
+            <br>
+            
+            <label for="">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Borg">
+            
+            <br>
+            
+            <p>
+                Age
+            </p>
+            
+            <input type="radio" id="age1" name="age" value="1" required>
+            <label for="radio">15-18</label>
+            
+            <br>
+            
+            <input type="radio" id="age2" name="age" value="2">
+            <label for="radio">19-24</label>
+            
+            <br>
+            
+            <input type="radio" id="age3" name="age" value="3">
+            <label for="radio">25-40</label>
+            
+            <br>
+            
+            <input type="radio" id="age4" name="age" value="4">
+            <label for="radio">41+</label>
+            
+        </fieldset>
+        
+        <br>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="joeborg@mail.com">
+                
+                <br>
+                
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="99774422">
+            </fieldset>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+
+</body>
+</html>
