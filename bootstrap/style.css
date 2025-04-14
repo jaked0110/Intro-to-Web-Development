@@ -1,0 +1,32 @@
+.btn-outline-primary{
+    color: aqua;
+    background-color: azure;
+    margin: 1em;
+    border-color: blanchedalmond;
+}
+
+.btn-outline-primary:hover{
+    color: rgb(255, 77, 0);
+    background-color: rgb(157, 49, 206);
+    margin: 1em;
+    border-color: rgb(255, 153, 0);
+}
+
+
+.navbar-toggler-icon {
+transition: transform 0.3s;
+}
+.navbar-toggler.collapsed .navbar-toggler-icon {
+transform: rotate(90deg);
+}
+
+.container{
+    overflow: auto;
+    margin-left: 1em;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.carousel{
+    width: 1920px;
+}

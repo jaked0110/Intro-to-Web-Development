@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="divs.css">
+    <title>Contact</title>
+</head>
+<body style="background-color: #F7F3E3; color: #ec6e00;">
+    <form 
+    action="mailto:jake.dougall.d102646@mcast.edu.mt"
+    method="post"
+    enctype="text/plain">
+    
+    <fieldset>
+        
+        <legend>
+            Personal Details
+        </legend>
+        
+        <label for="">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Joe" required>
+        
+        <br>
+        
+        <label for="">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Borg">
+        
+        <br>
+        
+        <p>
+            Age
+        </p>
+        
+        <input type="radio" id="age1" name="age" value="1" required>
+        <label for="radio">15-18</label>
+        
+        <br>
+        
+        <input type="radio" id="age2" name="age" value="2">
+        <label for="radio">19-24</label>
+        
+        <br>
+        
+        <input type="radio" id="age3" name="age" value="3">
+        <label for="radio">25-40</label>
+        
+        <br>
+        
+        <input type="radio" id="age4" name="age" value="4">
+        <label for="radio">41+</label>
+        
+    </fieldset>
+    
+    <br>
+    
+    <fieldset>
+        <legend>Contact Information</legend>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="joeborg@mail.com" required>
+        
+        <br>
+        
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="9977 4422"
+        required pattern="[0-9]{4} [0-9]{4}">
+    </fieldset>
+    
+    <br>
+    
+    <fieldset>
+        <legend>Message Details</legend>
+        <select name="department" id="department">
+            <option value="" selected disabled>Please Select Department</option>
+            <option value="1">Customer Support</option>
+            <option value="2">Technical Support</option>
+        </select>
+        
+    <br>
+
+        <textarea name="message" id="message" placeholder="Add Text Here..." cols="100" rows="10"></textarea>
+
+    </fieldset>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Cancel</button>
+    
+</form>
+
+</body>
+</html>
