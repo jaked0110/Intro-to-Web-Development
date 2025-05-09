@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+H1{
+  font-family: 'Space Grotesk';
+  color: #ededed;
+  font-size: 4rem;
+}
+
+H2{
+  font-family: 'Syne';
+  color: #ededed;
+  font-size: 3rem;
+}
+
+H3{
+  font-family: 'Dm Sans';
+  color: #ededed;
+  font-size: 2rem;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: #121212;
@@ -12,81 +30,52 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: #1e1e1e;
+  justify-content: space-between;
 }
 
-.logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #FF5100;
+
+.OnAir{
+  background-color: #4CE1B6;
+  font-size: 3rem;
+  color: #F7F3E3;
+  padding: 1.5rem;
+  border-radius: 10px;
 }
 
 nav a {
-  color: #ededed;
+  font-family: 'Syne';
+  color: #a0a0a0;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
   text-decoration: none;
   font-weight: 500;
+  font-size: 2rem;
 }
 
 nav a:hover {
-  color: #A259FF;
+  color: #ededed;
+  transition: 0.4s;
 }
 
-.hero {
-  padding: 4rem 2rem 2rem;
-  text-align: center;
+.searchbar{
+background: radial-gradient(87.81% 1969.02% at 7.26% 50.88%, rgba(29, 101, 80, 0.2) 0%, rgba(58, 203, 161, 0.2) 100%);
+border: 1px solid #000000;
+border-radius: 38px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-family: 'Syne', sans-serif;
-  margin-bottom: 0.5rem;
+:placeholder-shown{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #a0a0a0;
+input{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.card {
-  background-color: #2A2A2A;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  background-color: #4CE1B6;
-  color: #121212;
-}
-
-.card.chill { background-color: #203A43; }
-.card.hype { background-color: #FF6B6B; }
-.card.focus { background-color: #4CE1B6; }
-.card.melancholy { background-color: #5C6BC0; }
-.card.feelgood { background-color: #FF9F1C; }
-.card.ambient { background-color: #9AEBA3; }
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #a0a0a0;
-  background-color: #1e1e1e;
-}
