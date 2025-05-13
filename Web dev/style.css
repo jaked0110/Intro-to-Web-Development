@@ -141,3 +141,25 @@ p{
   background-color: #ededed;
   margin-left: 25%;
 }
+
+.text-container {
+    position: relative;
+    display: flex; /* Use flexbox to stack elements */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 0.25rem; /* Add spacing between the background and foreground text */
+}
+.background-text {
+    position: absolute;
+    font-size: 17rem !important; /* Adjust size as needed */
+    color: #121212 !important; /* Light color for background */
+    z-index: 1 !important; /* Lower z-index */
+    pointer-events: none; /* Prevent interaction */
+    line-height: 0.8;
+}
+
+.foreground-text {
+    position: relative;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ededed; /* Foreground color */
+    z-index: 2 !important; /* Higher z-index */
+}
