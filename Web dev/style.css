@@ -5,21 +5,21 @@
 }
 
 H1{
-  font-family: 'Space Grotesk';
-  color: #ededed;
-  font-size: 4rem;
+  font-family: 'Space Grotesk' !important;
+  color: #ededed !important;
+  font-size: 4rem !important;
 }
 
 H2{
-  font-family: 'Syne';
-  color: #ededed;
-  font-size: 3rem;
+  font-family: 'Syne' !important;
+  color: #ededed !important;
+  font-size: 3rem !important;
 }
 
 H3{
-  font-family: 'Dm Sans';
-  color: #ededed;
-  font-size: 2rem;
+  font-family: 'Dm Sans' !important;
+  color: #ededed !important;
+  font-size: 2rem !important;
 }
 
 body {
@@ -79,3 +79,8 @@ input{
   padding-bottom: 0.25rem;
 }
 
+p{
+  font-family:'Dm Sans' !important;
+  font-size: 1.2rem;
+  color: #ededed !important;
+}
