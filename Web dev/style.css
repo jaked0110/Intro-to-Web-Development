@@ -135,3 +135,9 @@ p{
   transition: opacity 0.3s ease;
 }
 
+.line{
+  width: 50%;
+  height: 2px;
+  background-color: #ededed;
+  margin-left: 25%;
+}
