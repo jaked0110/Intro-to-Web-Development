@@ -40,8 +40,8 @@ header {
   background-color: #4CE1B6;
   font-size: 3rem;
   color: #F7F3E3;
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 20px;
 }
 
 nav a {
@@ -60,9 +60,9 @@ nav a:hover {
 }
 
 .searchbar{
-background: radial-gradient(87.81% 1969.02% at 7.26% 50.88%, rgba(29, 101, 80, 0.2) 0%, rgba(58, 203, 161, 0.2) 100%);
-border: 1px solid #000000;
-border-radius: 38px;
+  background: radial-gradient(87.81% 1969.02% at 7.26% 50.88%, rgba(29, 101, 80, 0.2) 0%, rgba(58, 203, 161, 0.2) 100%);
+  border: 1px solid #000000;
+  border-radius: 38px;
 }
 
 :placeholder-shown{
@@ -84,3 +84,54 @@ p{
   font-size: 1.2rem;
   color: #ededed !important;
 }
+
+.stat-bar-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stats{
+  background: #ff6b6b00;
+  padding: 0.5rem;
+  color: #FFE88B !important;
+}
+
+.stat-bar {
+  position: relative;
+  height: 120px;
+  background-color: #ff6b6b;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ff6b6b00;
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.stat-bar:hover .bar-label {
+  opacity: 1;
+}
+
+.stat-bar:hover .bar-fill {
+  background-color: #ff6b6b00;
+}
+
+.bar-label {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
