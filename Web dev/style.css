@@ -254,3 +254,85 @@ h4{
   transform: translateY(0);
   animation: fadeInUp 0.8s forwards;
 }
+
+span{
+  font-family: 'DM Sans' !important;
+  color: #ededed !important;
+}
+
+form, 
+form label, 
+form input, 
+form textarea, 
+form select, 
+form button {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+form label {
+  color: #ededed;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+form .form-control,
+form .form-select {
+  background: #181818;
+  color: #ededed;
+  border: 1px solid #444;
+  border-radius: 0rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+  border-color: #4CE1B6;
+  box-shadow: 0 0 0 0.15rem rgba(76,225,182,0.15);
+  background: #222;
+  color: #ededed;
+}
+
+form .form-control::placeholder,
+form textarea::placeholder {
+  color: #888;
+  opacity: 1;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Default State */
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212; /* Default black background */
+    color: #F7F3E3; /* White text */
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid transparent; /* No border by default */
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover State */
+form .submit-button:hover {
+    background-color: #F7F3E3; /* Light background */
+    color: #4CE1B6; /* Teal text */
+    border-color: #4CE1B6; /* Add teal border */
+}
+
+/* Activated State */
+.submit-button:active {
+    background-color: #4CE1B6; /* Teal background */
+    color: #121212; /* Black text */
+    border-color: #4CE1B6; /* Keep teal border */
+    transform: scale(0.98); /* Slightly shrink button */
+}
