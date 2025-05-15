@@ -242,8 +242,20 @@ h4{
 
 .custom-card:hover {
   transform: translateY(-12px) scale(1.04);
+  transition: transform 0.3s ease-in, 
+              box-shadow 0.3s ease-in, 
+              background 0.3s ease-in, 
+              color 0.3s ease-in;
   box-shadow: 0 16px 48px 0 rgba(76, 225, 182, 0.25);
-  border-color: #4ce1b6;
+  background: linear-gradient(232.65deg, rgba(0, 0, 0, 0) 36.04%, rgba(76, 225, 182, 0.2) 79.33%), #EDEDED;
+  border: 1px solid #2A2A2A;
+  color: #4CE1B6;
+}
+
+.custom-card:hover h2,
+.custom-card:hover p,
+.custom-card:hover h3 {
+    color: #4CE1B6 !important;
 }
 
 /* Fade-in Animation */
@@ -270,6 +282,12 @@ h4{
   opacity: 1;
   transform: translateY(0);
   animation: fadeInUp 0.8s forwards;
+}
+
+.custom-card-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link behave like a block-level element */
 }
 
 span{
@@ -346,12 +364,8 @@ form .submit-button:hover {
   border-color: #4CE1B6; /* Add teal border */
 }
 
-/* Activated State */
-.submit-button:active {
-  background-color: #4CE1B6; /* Teal background */
-  color: #121212; /* Black text */
-  border-color: #4CE1B6; /* Keep teal border */
-  transform: scale(0.98); /* Slightly shrink button */
+form button span:hover{
+  color: #4CE1B6 !important;
 }
 
 /* Hero Section */
