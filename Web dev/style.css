@@ -46,10 +46,10 @@ header {
   color: #F7F3E3;
   padding: 1.25rem;
   transition: 
-    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .OnAir:hover{
@@ -59,6 +59,19 @@ header {
   transform: translateY(-8px);
   box-shadow: 0 8px 32px 0 rgba(76, 225, 182, 0.25);
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between links */
+    align-items: center; /* Vertically center items */
+    padding: 1rem 2rem;
+    width: 100%; /* Full width */
+    position: absolute; /* Position it over the hero section */
+    top: 0; /* Stick to the top of the page */
+    left: 0;
+    z-index: 10; /* Ensure it stays above the background */
+}
+
 
 nav a {
   font-family: 'Syne';
@@ -74,6 +87,8 @@ nav a:hover {
   color: #ededed;
   transition: 0.4s;
 }
+
+
 
 .searchbar{
   background: radial-gradient(87.81% 1969.02% at 7.26% 50.88%, rgba(29, 101, 80, 0.2) 0%, rgba(58, 203, 161, 0.2) 100%);
@@ -108,16 +123,16 @@ p{
   gap: 1.25rem;
 }
 
-.stats{
+.stats {
   background: #ff6b6b00;
   padding: 0.5rem;
   color: #FFE88B !important;
+  font-size: 2.5rem !important;
 }
 
 .stat-bar {
   position: relative;
   height: 120px;
-  background-color: #ff6b6b;
   overflow: hidden;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -129,26 +144,32 @@ p{
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #ff6b6b00;
-  transition: background 0.3s ease;
+  background-color: #ff6b6b;
+  transition: transform 0.5s ease; /* Smooth sliding effect */
   z-index: 1;
 }
 
-.stat-bar:hover .bar-label {
-  opacity: 1;
-}
-
 .stat-bar:hover .bar-fill {
-  background-color: #ff6b6b00;
+  transform: translateX(100%); /* Slide the bar-fill out to the right */
 }
 
 .bar-label {
   position: absolute;
   font-size: 1.2rem;
   font-weight: bold;
-  opacity: 0;
-  z-index: 2;
-  transition: opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  z-index: 2; /* Ensure it appears above the bar-fill */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  pointer-events: none; /* Prevent interaction issues */
+  white-space: nowrap; /* Prevent text wrapping */
+  color: #ededed; /* Ensure text color is visible */
+}
+
+.stat-bar:hover .bar-label {
+  opacity: 1; /* Make the text visible when the bar-fill slides out */
 }
 
 .line{
@@ -160,45 +181,41 @@ p{
 }
 
 .text-container {
-    position: relative;
-    min-height: 22rem; /* Ensures enough height for background text */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 3rem 2rem;
-    margin-bottom: 3rem;
-    overflow: visible;
+  position: relative; /* Keep this if child elements need absolute positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  min-height: unset; /* Remove the height restriction */
+  overflow: unset; /* Allow content to flow freely */
 }
 
 .background-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 15rem !important; /* Responsive size */
-    color: #121212 !important;
-    z-index: 1;
-    pointer-events: none;
-    line-height: 0.85; /* Adjust gap between About and Us */
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: bold;
-    opacity: 1; /* Make it more subtle */
-    width: 100%;
-    text-align: left;
-    white-space: pre-line;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 15rem !important; /* Responsive size */
+  color: #121212 !important;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 0.85; /* Adjust gap between About and Us */
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  opacity: 1; /* Make it more subtle */
+  width: 100%;
+  text-align: left;
+  white-space: pre-line;
 }
 
 .foreground-text {
-    position: relative;
-    z-index: 2;
-    color: #ededed;
-    font-size: 1.25rem;
-    width: 100%;
-    text-align: left;
-}
-
-.container-fluid{
-  margin-left: 2rem !important;
+  position: relative;
+  z-index: 2;
+  color: #ededed;
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: left;
 }
 
 h4{
@@ -305,34 +322,69 @@ form textarea::placeholder {
 
 /* Default State */
 .submit-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212; /* Default black background */
-    color: #F7F3E3; /* White text */
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 0.75rem 2.5rem;
-    border: 2px solid transparent; /* No border by default */
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212; /* Default black background */
+  color: #F7F3E3; /* White text */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border: 2px solid transparent; /* No border by default */
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Hover State */
 form .submit-button:hover {
-    background-color: #F7F3E3; /* Light background */
-    color: #4CE1B6; /* Teal text */
-    border-color: #4CE1B6; /* Add teal border */
+  background-color: #F7F3E3; /* Light background */
+  color: #4CE1B6; /* Teal text */
+  border-color: #4CE1B6; /* Add teal border */
 }
 
 /* Activated State */
 .submit-button:active {
-    background-color: #4CE1B6; /* Teal background */
-    color: #121212; /* Black text */
-    border-color: #4CE1B6; /* Keep teal border */
-    transform: scale(0.98); /* Slightly shrink button */
+  background-color: #4CE1B6; /* Teal background */
+  color: #121212; /* Black text */
+  border-color: #4CE1B6; /* Keep teal border */
+  transform: scale(0.98); /* Slightly shrink button */
 }
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.17%, #121212 100%), linear-gradient(180deg, #121212 0%, rgba(0, 0, 0, 0) 43.33%), url(imgs/jason-leung-xR4JHzr69Og-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 10rem 2rem;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure proper stacking with navbar */
+}
+
+.hero-section nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 2rem 17.5rem; /* Add spacing inside the navbar */
+    width: 100%; /* Keep the full width */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+/* Hero Text */
+.hero-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ededed;
+    line-height: 1.2;
+}
+
+
+
