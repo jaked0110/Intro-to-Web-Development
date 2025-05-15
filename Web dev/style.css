@@ -45,6 +45,19 @@ header {
   font-size: 3rem;
   color: #F7F3E3;
   padding: 1.25rem;
+  transition: 
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.OnAir:hover{
+  background-color: #F7F3E3;
+  color: #4CE1B6;
+  transition: 0.4s ease-in-out;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px 0 rgba(76, 225, 182, 0.25);
 }
 
 nav a {
