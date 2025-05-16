@@ -400,5 +400,175 @@ form button span:hover{
     line-height: 1.2;
 }
 
+/* Container for play button + track box */
+.current-track-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    gap: 2rem; /* space between play button and box */
+}
 
+/* Track box styling */
+.current-track-box {
+    border: 1px solid #4ce1b6;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #181818;
+    color: #4ce1b6;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 400px;
+    max-width: 900px;
+    width: 100%;
+    gap: 2rem;
+}
 
+/* Play button styling */
+.play-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Track info and producer */
+.current-track-info {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.current-track-producer {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4ce1b6;
+    margin-left: 2rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Aligns with current-track-row */
+.previous-track-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+/* Previous track */
+.previous-track-box {
+    border: 1px solid #A0A0A0;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #181818;
+    color: #A0A0A0;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 400px;
+    max-width: 900px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.previous-track-box {
+    border: 1px solid #A0A0A0;
+    padding: 1.2rem 2rem;
+    margin-left: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #181818;
+    color: #A0A0A0;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 400px;
+    max-width: 900px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.previous-track-info {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #A0A0A0;
+}
+
+.previous-label {
+    font-style: italic;
+    color: #A0A0A0;
+}
+
+.previous-title {
+    font-weight: bold;
+    color: #A0A0A0;
+}
+
+.previous-track-producer {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #A0A0A0;
+    margin-left: 2rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.upcoming-tracks-container {
+    max-width: 80vw;
+    margin: 2rem auto;
+    margin-left: 27.5%;
+}
+
+.upcoming-label {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ededed;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.upcoming-track-box {
+    border: 1px solid #b0b0b0;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #181818;
+    color: #ededed;
+    font-family: 'DM Sans', sans-serif;
+    min-width: 400px;
+    max-width: 900px;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.upcoming-track-info {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.upcoming-label-track {
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+.upcoming-title {
+    font-weight: bold;
+    color: #ededed;
+}
+
+.upcoming-track-producer {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ededed;
+    margin-left: 2rem;
+    text-align: right;
+    white-space: nowrap;
+}
