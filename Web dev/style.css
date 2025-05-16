@@ -518,6 +518,12 @@ form button span:hover{
     white-space: nowrap;
 }
 
+.previous-track-box .previous-label,
+.previous-track-box .previous-title,
+.previous-track-box .previous-info {
+    color: #A0A0A0 !important;
+}
+
 .upcoming-tracks-container {
     max-width: 80vw;
     margin: 2rem auto;
